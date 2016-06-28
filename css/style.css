@@ -133,6 +133,7 @@ section ul li:before {
 .row-0-gutter {
     margin-left: -13px;
     margin-right: -13px;
+    margin-bottom: 70px;
 }
 
 .col-0-gutter {
@@ -465,9 +466,10 @@ header .intro-text .intro-heading {
 }
 
 /*--------------------
-4.1. About
+4.1. About & some Services
 --------------------*/
-#about{background-color: #fff;
+#about, 
+#services{background-color: #fff;
 	overflow:hidden;
 	background-attachment:fixed;
 	background-position:center;
@@ -477,20 +479,23 @@ header .intro-text .intro-heading {
 	-o-background-size:cover;
 	background-size:cover;}
 
-.about-wrap {
+.about-wrap,
+.services-wrap {
 	/* background-image: url('');
 	padding:70px 0;
 	margin:-70px;
 	background-color: rgba(255,255,255,.3);	 */
 }
 
-.about-heading {
+.about-heading,
+.services-heading {
 	text-transform: uppercase;
 	font-weight: 600;
 	margin-bottom: 35px;
 }
 
-.about-heading:after {
+.about-heading:after,
+.services-heading:after {
 	left: 50%;
 	z-index: 1;
 	width: 40px;
@@ -502,26 +507,39 @@ header .intro-text .intro-heading {
 	position: absolute;
 	background: #960853;
 }
-.mz-module-about h3 {
+.mz-module-about h3,
+.mz-module-services h3 {
 	font-weight: 500;
-	font-size: 19px;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: #000000;
 	letter-spacing: 2px;
 	margin-bottom: 20px;
 }
 
-.dark-bg .mz-module-about h3 {
+.dark-bg .mz-module-about h3,
+.dark-bg .mz-module-services h3 {
 	color: #222;
 }
 
 .mz-module-about p {
 	font-size: 14px;
-	font-weight: 300;
+	font-weight: 900;
 	line-height: 22px;
 	color: #969696;
 }
 
+.mz-module-services p {
+	font-size: 14px;
+	font-weight: 900;
+	line-height: 22px;
+	color: #960853;
+}
+
+.icon-decrip {
+	font-weight: 300 !important;
+	color: #222 !important;
+}
 .ot-circle {
 	height: 95px;
 	width: 95px;
@@ -538,7 +556,7 @@ header .intro-text .intro-heading {
 	height: 95px;
 	width: 95px;
 	text-align: center;
-	line-height: 98px;
+	line-height: 95px;
 	color: #FFFFFF;
 	border-radius: 100px;
 	background-color: #960853;
@@ -785,7 +803,6 @@ header .intro-text .intro-heading {
 .dark-bg .section-text h4 {
 	color: #dfdfdf;
 }
-
 /*--------------------
 4.3. Portfolio
 --------------------*/
@@ -871,10 +888,10 @@ figure.effect-bubba figcaption::after {
 figure.effect-bubba h2 {
 	opacity: 0;
 	color: #fff;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding-top: 30%;
+	padding-top: 25%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 	-webkit-transform: translate3d(0,-20px,0);
@@ -883,9 +900,9 @@ figure.effect-bubba h2 {
 
 figure.effect-bubba p {
 	color: #fff;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
-	padding: 20px 2.5em;
+	padding: 15px 2.5em;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -906,11 +923,210 @@ figure.effect-bubba:hover p {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+/*--------------------
+4.3. Services
+--------------------*/
 
+/*--------------------------------*/
+/***** Services Common style *****/
+/*--------------------------------*/
+
+#services .services-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#services .services-item .services-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+    outline: none;
+}
+
+#services .services-item .services-link .services-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(110,62,176,.6);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#services .services-item .services-link .services-hover:hover {
+    opacity: 1;
+}
+
+#services .services-item .services-link .services-hover .services-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#services .services-item .services-link .services-hover .services-hover-content i {
+    margin-top: -12px;
+}
+
+#services .services-item .services-link .services-hover .services-hover-content h3,
+#services .services-item .services-link .services-hover .services-hover-content h4 {
+    margin: 0;
+}
+
+#services .services-item .services-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#services .services-item .services-caption h4 {
+	font-size: 25px;
+    margin: 0;
+    text-transform: none;
+}
+
+#services .services-item .services-caption p {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#services * {
+    z-index: 2;
+}
+.add-ons-row {
+	padding-top: 50px !important;
+}
+
+.services-icon {
+	color: #fff;
+    font-size: 30px;
+}
+@media(min-width:767px) {
+
+    #services .services-item {
+        margin: 0 0 30px;
+    }   
+}
+
+/*Modal Styles*/
+
+.services-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.services-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.services-modal .modal-content p {
+	font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.services-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.services-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.services-modal .modal-content img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.services-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.services-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.services-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.services-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.services-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.btn-primary {
+	background-color: #6E3EB0;
+}
+
+.btn-primary:hover {
+	background-color: #C56153;
+	border-color: #6E3EB0;
+	color: #000;
+}
+.modal-pricing p {
+	color: #960853 !important;
+    font-weight: 600 !important;
+    text-align: center;
+    font-size: 20px !important;
+    margin: 10px 20px !important;
+}
+/*-----------------------*/
+/***** Specials *****/
+/*-----------------------*/
+
+.underline {
+	text-decoration: underline;
+}
 
 /*--------------------
 4.5. Partners Slider
 --------------------*/
+.services-modal .modal-content h3 {
+	font-size: 25px;
+}
 
 .owl-portfolio .owl-controls {
 	position: absolute;
@@ -1018,6 +1234,10 @@ figure.effect-bubba:hover p {
 /*--------------------
 4.7. Contacts
 --------------------*/
+.form-control {
+    border-radius: 0px;
+    outline: none;
+}
 
 section#contact form {
 	margin-top: 15px;
@@ -1210,7 +1430,34 @@ footer p a span {
 	border-radius: 0;	
 }
 .modal-header .close {
-	font-size: 30px;	
+	font-size: 40px;
+	color: #222;
+	opacity: 1;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;	
+}
+.modal-header .close:hover {
+	color: #960853;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;
+}
+.modal-close {
+	    color: #000 !important;
+    background: transparent !important;
+    border: 1px solid #222 !important;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;
+}
+.modal-close:hover {
+	color: #fff !important;
+	background: #960853 !important;
+	border-color: transparent !important;
+	-webkit-transition: all 400ms ease-in;
+	-moz-transition: all 400ms ease-in;
+	transition: all 400ms ease-in;
 }
 .modal-title {	
 	text-transform: uppercase;
@@ -1223,24 +1470,30 @@ footer p a span {
 
 .modal-body p {
 	margin: 30px 20px;
-	color: #2D2D2D;		
+	color: #222;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;	
 }
 
 .modal-works {
-font-size: 11px;
+	font-size: 11px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 500;
 	color: #fff;
 	margin: 25px 20px;
+	text-align: center;
 }
 
 .modal-works span {
-	background-color: #FED136;
+	background-color: #960853;
 	margin-right: 15px;
 	padding: 5px 10px;
 }
-
+.modal-font-sm {
+	font-size: 14px;
+}
 /*--------------------
 7. Components
 --------------------*/
@@ -1320,14 +1573,14 @@ font-size: 11px;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #FFFFFF;
-	background: #fff;
+	background: rgba(255, 255, 255, 0.6);
 	/* background color transition */
 	-webkit-transition: 1s;
 	-moz-transition: 1s;
 	transition: 1s;
-	-webkit-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.75);
-	   -moz-box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.75);
-	        box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.75);
+	   -moz-box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.75);
+	        box-shadow: 0px 0px 27px 0px rgba(0,0,0,0.75);
 }
 #back-top a:hover {
 	background: #960853;
@@ -1357,11 +1610,7 @@ and (max-width : 480px) {
 }
 
 /* Table of Content
-==================================================
-	#For Small Desktops:  980px - 1150px
-	#Tablet (Portrait) Design for a width of 768px: 768px - 979px
-	#Mobile (Portrait) Design for a width of 320px: 320px - 768px
-	#Mobile (Landscape) Design for a width of 480px: 480px - 768px
+==================================================================================================================================================================================
 */
 
 /* ============================================================
@@ -1380,12 +1629,16 @@ and (max-width : 480px) {
 }
 
 /* ============================================================
-   Tablet (Portrait) Design for a width of 768px
+   Tablet (Portrait) Design for a width of 993px
 =============================================================== */
 
-@media (min-width: 768px) and (max-width: 979px) {
-	/* Navigation */
-	
+@media only screen and (max-width: 993px) {
+	.m-top {
+		margin-top: 40px;
+	}
+	.row-0-gutter {
+	    margin-bottom: 30px;
+	}
 }
 
 /* ============================================================
@@ -1398,9 +1651,23 @@ and (max-width : 480px) {
     font-size: 11px;
 	}
 }
+/* ============================================================
+   Mobile (Portrait) Design for a width of 993px
+=============================================================== */
+
+@media (min-width: 768px) and (max-width: 993px) {
+	/* Navigation */
+	.navbar-default .nav li a {
+    font-size: 11px;
+	}
+
+	.m-top {
+		margin-top: 35px;
+	}
+}
 
 /* ============================================================
-   Mobile (Portrait) Design for a width of 320px
+   Mobile (Portrait) Design for a width of 767px
 =============================================================== */
 
 @media only screen and (max-width: 767px) {
@@ -1425,210 +1692,210 @@ and (max-width : 480px) {
     max-height: 100%;
 	}
 	/* Navigation links animation */
-.link {
-	display: block;
-	overflow: hidden;
-	line-height: 1.75;
-	color: #222;
-}
+	.link {
+		display: block;
+		overflow: hidden;
+		line-height: 1.75;
+		color: #222;
+	}
 
-.link:hover {
-	color: #960853;
-    text-decoration: none;
-}
+	.link:hover {
+		color: #960853;
+	    text-decoration: none;
+	}
 
-/* Navigation footer contact */
-.nav-icons-wrap li {
-	display: inline-block;
-	margin: 10px;
-}
+	/* Navigation footer contact */
+	.nav-icons-wrap li {
+		display: inline-block;
+		margin: 10px;
+	}
 
-.contact-link  a {
-	margin: 15px 0;
-    font-size: 15px;
-    font-weight: 600;
-	text-align: center;
-	text-transform: none;
-	-webkit-transition: all 200ms ease-in;
-	-moz-transition: all 200ms ease-in;
-	transition: all 200ms ease-in;
-}
+	.contact-link  a {
+		margin: 15px 0;
+	    font-size: 15px;
+	    font-weight: 600;
+		text-align: center;
+		text-transform: none;
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
+	}
 
-.contact-link {
-	display: block;
-    width: 244px;
-    margin: 0 auto;
-}
+	.contact-link {
+		display: block;
+	    width: 263px;
+	    margin: 0 auto;
+	}
 
-.nav-line {
-	border-top: 1px solid #960853 !important;
-}
-/*Nav-footer animation*/
-.nav-footer {
-	display: block;
-}
-.nav-icon-wrap {
-	text-align: center;
-	margin: 0 auto;
-}
+	.nav-line {
+		border-top: 1px solid #960853 !important;
+	}
+	/*Nav-footer animation*/
+	.nav-footer {
+		display: block;
+	}
+	.nav-icon-wrap {
+		text-align: center;
+		margin: 0 auto;
+	}
 
-.nav-icons {
-	padding: 15px 0 52% 0;
-}
-.nav-icon .fa {
-	color: #960853;
-}
-.nav-icon {
-	display: inline-block;
-	font-size: 35px;
-	cursor: pointer;
-	margin: 10px 20px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	text-align: center;
-	position: relative;
-	z-index: 1;
-	color: #960853;
-}
+	.nav-icons {
+		padding: 15px 0 52% 0;
+	}
+	.nav-icon .fa {
+		color: #960853;
+	}
+	.nav-icon {
+		display: inline-block;
+		font-size: 35px;
+		cursor: pointer;
+		margin: 10px 20px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		color: #960853;
+	}
 
-.nav-icon:after {
-	pointer-events: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	content: '';
-	-webkit-box-sizing: content-box; 
-	-moz-box-sizing: content-box; 
-	box-sizing: content-box;
-}
+	.nav-icon:after {
+		pointer-events: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		content: '';
+		-webkit-box-sizing: content-box; 
+		-moz-box-sizing: content-box; 
+		box-sizing: content-box;
+	}
 
-.nav-icon-effect .nav-icon {
-	background: rgba(255,255,255,0.1);
-	-webkit-transition: background 0.2s, color 0.2s;
-	-moz-transition: background 0.2s, color 0.2s;
-	transition: background 0.2s, color 0.2s;
-}
+	.nav-icon-effect .nav-icon {
+		background: rgba(255,255,255,0.1);
+		-webkit-transition: background 0.2s, color 0.2s;
+		-moz-transition: background 0.2s, color 0.2s;
+		transition: background 0.2s, color 0.2s;
+	}
 
-.nav-icon-effect .nav-icon:after {
-	top: -7px;
-	left: -7px;
-	padding: 7px;
-	box-shadow: 0 0 0 4px #fff;
-	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-	-webkit-transform: scale(.8);
-	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
-	-moz-transform: scale(.8);
-	-ms-transform: scale(.8);
-	transition: transform 0.2s, opacity 0.2s;
-	transform: scale(.8);
-	opacity: 0;
-}
+	.nav-icon-effect .nav-icon:after {
+		top: -7px;
+		left: -7px;
+		padding: 7px;
+		box-shadow: 0 0 0 4px #fff;
+		-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+		-webkit-transform: scale(.8);
+		-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+		-moz-transform: scale(.8);
+		-ms-transform: scale(.8);
+		transition: transform 0.2s, opacity 0.2s;
+		transform: scale(.8);
+		opacity: 0;
+	}
 
-.nav-icon-effect .facebook:after {
-	box-shadow: 0 0 0 4px #4C66A4;
-}
+	.nav-icon-effect .facebook:after {
+		box-shadow: 0 0 0 4px #4C66A4;
+	}
 
-.nav-icon-effect .fa-facebook:hover {
-	color: #4C66A4;
-} 
+	.nav-icon-effect .fa-facebook:hover {
+		color: #4C66A4;
+	} 
 
-.nav-icon-effect .googleplus:after {
-	box-shadow: 0 0 0 4px #D34836;
-}
+	.nav-icon-effect .googleplus:after {
+		box-shadow: 0 0 0 4px #D34836;
+	}
 
-.nav-icon-effect .fa-google-plus:hover {
-	color: #D34836;
-} 
+	.nav-icon-effect .fa-google-plus:hover {
+		color: #D34836;
+	} 
 
-.nav-icon-effect .instagram:after {
-	box-shadow: 0 0 0 4px #517fa4;
-}
+	.nav-icon-effect .instagram:after {
+		box-shadow: 0 0 0 4px #517fa4;
+	}
 
-.nav-icon-effect .fa-instagram:hover {
-	color: #517fa4;
-} 
+	.nav-icon-effect .fa-instagram:hover {
+		color: #517fa4;
+	} 
 
-.nav-icon-effect .nav-icon:hover:after {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-	opacity: 1;
-}
+	.nav-icon-effect .nav-icon:hover:after {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
 
-/* hamburger animation */
-.icon-bar-anim {
-    -webkit-transition: all 600ms ease-in;
-    -moz-transition: all 600ms ease-in;
-    transition: all 600ms ease-in;
-}
+	/* hamburger animation */
+	.icon-bar-anim {
+	    -webkit-transition: all 600ms ease-in;
+	    -moz-transition: all 600ms ease-in;
+	    transition: all 600ms ease-in;
+	}
 
-.icon-bar-anim span:nth-child(2){
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    -webkit-transition: all 600ms ease-in;
-    -moz-transition: all 600ms ease-in;
-    transition: all 600ms ease-in;
-    margin-top: 4px;
-}
+	.icon-bar-anim span:nth-child(2){
+	    transform: rotate(135deg);
+	    -webkit-transform: rotate(135deg);
+	    -webkit-transition: all 600ms ease-in;
+	    -moz-transition: all 600ms ease-in;
+	    transition: all 600ms ease-in;
+	    margin-top: 4px;
+	}
 
-.icon-bar-anim span:nth-child(3){
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    -webkit-transition: all 400ms ease-in;
-    -moz-transition: all 400ms ease-in;
-    transition: all 400ms ease-in;
-    margin-top: -7px;
-}
+	.icon-bar-anim span:nth-child(3){
+	    transform: rotate(-135deg);
+	    -webkit-transform: rotate(-135deg);
+	    -webkit-transition: all 400ms ease-in;
+	    -moz-transition: all 400ms ease-in;
+	    transition: all 400ms ease-in;
+	    margin-top: -7px;
+	}
 
-.icon-bar-anim span:nth-child(4){
-    margin-top: -8px;
-    height: 0px;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    -webkit-transition: all 600ms ease-in;
-    -moz-transition: all 600ms ease-in;
-    transition: all 600ms ease-in;  
+	.icon-bar-anim span:nth-child(4){
+	    margin-top: -8px;
+	    height: 0px;
+	    transform: rotate(-135deg);
+	    -webkit-transform: rotate(-135deg);
+	    -webkit-transition: all 600ms ease-in;
+	    -moz-transition: all 600ms ease-in;
+	    transition: all 600ms ease-in;  
 	}
 	.scroll-btn{
 		bottom:40px;
 	}
-.scroll-btn p{
-	color:#fff;
-}
-.scroll-btn .swipe{
-	display:inline-block;
-}
-.scroll-btn .mouse > *{
-	width:15px;
-	height:15px;
-	background:#fff;
-}
-.scroll-btn .scroll{
-	display:none;
-}
-.scroll-btn .mouse{
-	border:none;
-}
-@-webkit-keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
-@-moz-keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
-@keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
+	.scroll-btn p{
+		color:#fff;
+	}
+	.scroll-btn .swipe{
+		display:inline-block;
+	}
+	.scroll-btn .mouse > *{
+		width:15px;
+		height:15px;
+		background:#fff;
+	}
+	.scroll-btn .scroll{
+		display:none;
+	}
+	.scroll-btn .mouse{
+		border:none;
+	}
+	@-webkit-keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
+	@-moz-keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
+	@keyframes ani-mouse{0%{opacity:1;top:100%;}15%{opacity:1;top:50%;}50%{opacity:0;top:50%;}100%{opacity:0;top:100%;}}
 
-/* landing page */
-.landing-overlay {
-    background-color: rgba(0,0,0,.2);
-}
-/* about section */
-.section-title p,
-.section-title2 p {
-    margin: 20px 40px 60px 40px;
+	/* landing page */
+	.landing-overlay {
+	    background-color: rgba(0,0,0,.2);
+	}
+	/* about section */
+	.section-title p,
+	.section-title2 p {
+	margin: 20px 40px 60px 40px;
 	}
 
 	  #map-canvas {
-        height: 250px;
-    }
+	    height: 250px;
+	}
 	.social-button {
 	    width: 60px;
 	    height: 60px;
@@ -1640,25 +1907,29 @@ and (max-width : 480px) {
 	.section-title3 h2 {
 	font-size: 25px;
 	margin-bottom: 40px;
-}
+	}
 
-.section-title3 h2:after {
-	bottom: -18px;
-}
-.bx-wrapper .testimonials-name {
-    font-size: 15px;
-}
-.testimonials-carousel-content p {
-	font-size: 13px;
-}
-.bx-wrapper {
-	padding-bottom: 0px;
-}
+	.section-title3 h2:after {
+		bottom: -18px;
+	}
+	.bx-wrapper .testimonials-name {
+	    font-size: 15px;
+	}
+	.testimonials-carousel-content p {
+		font-size: 13px;
+	}
+	.bx-wrapper {
+		padding-bottom: 0px;
+	}
+	/* Count down section */
+	#count-down{
+		background:#555;		
+	}
 }
 
 
 /* ============================================================
-   Mobile (Portrait) Design for a width of 320px
+   Mobile (Portrait) Design for a width of 600px
 =============================================================== */
 
 @media only screen and (max-width: 600px) {
@@ -1673,7 +1944,7 @@ and (max-width : 480px) {
 
 
 /* ============================================================
-   Mobile (Landscape) Design for a width of 480px
+   Mobile (Landscape) Design for a width of 480px - 767px
 =============================================================== */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -1684,25 +1955,26 @@ and (max-width : 480px) {
    iPhone 5s
 =============================================================== */
 @media only screen and (max-width: 321px) {
+	/* Navigation */
 	.nav-icon {
 	font-size: 24px;
 	margin: 0 27px;
 	width: 30px;
 	height: 30px;
-}
+	}
 
-header .intro-text .intro-lead-in {
-    padding: 1px 20px;
-    font-size: 15px;
-}
-header .intro-text .intro-heading {
-    font-size: 35px;
-  
-}
+	header .intro-text .intro-lead-in {
+	    padding: 1px 20px;
+	    font-size: 15px;
+	}
+	header .intro-text .intro-heading {
+	    font-size: 35px;	  
+	}
+	
 
 }
 /* ============================================================
-   Mobile (Portrait) Design for a width of 320px
+   Extra screen sizes
 =============================================================== */
 
 
@@ -1728,7 +2000,19 @@ header .intro-text .intro-heading {
 	}
 }
 
+/* Iphone 4 */
 @media only screen and (max-height: 481px) {
+	/* Navigation */
+	.navbar-collapse .navbar-nav li {
+		padding-bottom: 0px;
+	}
+	.contact-link a {
+    margin: 10px 0;
+	}
+	.nav-icons {
+    padding: 10px 0 52% 0;
+	}
+	.nav-line
 	header .intro-text {
     padding-top: 60%;
 	}
@@ -1740,6 +2024,8 @@ header .intro-text .intro-heading {
 }
 
 @media only screen and (max-height: 361px) {
+	/* Navigation */
+	
 	header .intro-text {
     padding-top: 22%;
 	}
