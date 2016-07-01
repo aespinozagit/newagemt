@@ -30,9 +30,17 @@ $(function() {
   var width = $(window).width();{
 
     if (width <= 769) {
-    $('<img src="images/backgrounds/services-bg.jpg" id="mobile-cover">').appendTo('.background-wrap');         
+    $('<img src="images/backgrounds/home-bg.jpg" id="mobile-cover">').appendTo('.background-wrap');
+    $('<img src="images/backgrounds/services-bg.jpg" id="mobile-cover">').appendTo('.background-wrap-serv'); 
+    $('<img src="images/backgrounds/specials-bg-4th.jpg" id="mobile-cover">').appendTo('.background-wrap-special');  
+    $('<img src="images/backgrounds/faqs-bg.jpg" id="mobile-cover">').appendTo('.background-wrap-faqs');
+    $('<img src="images/backgrounds/photos-bg.jpg" id="mobile-cover">').appendTo('.background-wrap-photos');         
     } else {
-    $('<video src="videos/service-vd.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap');    
+    $('<video src="videos/home-vd.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap');
+    $('<video src="videos/service-vd.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap-serv');
+    $('<video src="videos/special-vd-4th.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap-special');    
+    $('<video src="videos/faqs-vd.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap-faqs');
+    $('<video src="videos/photos-vd.mp4" id="video-bg-elem" autoplay loop muted></video>').appendTo('.background-wrap-photos'); 
   }
   }
   
@@ -120,7 +128,9 @@ $(function() {
     }, 800);
     return false;
   });
-/* ---------------------------------------------- /*
+
+  
+    /* ---------------------------------------------- /*
      * E-mail validation
     /* ---------------------------------------------- */
 
@@ -225,3 +235,19 @@ $(function() {
 
     });
 
+var speed = 'slow';
+
+$('html, body').hide();
+
+$(document).ready(function() {
+    $('html, body').fadeIn(speed, function() {
+        $('a[href], button[href]').click(function(event) {
+            var url = $(this).attr('href');
+            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+            event.preventDefault();
+            $('html, body').fadeOut(speed, function() {
+                window.location = url;
+            });
+        });
+    });
+});
