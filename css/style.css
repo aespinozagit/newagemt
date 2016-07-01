@@ -1719,6 +1719,17 @@ Map ==================*/
     height: 370px;
     width: 100%;
 }
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
 /*--------------------
 5. Footer
 --------------------*/
